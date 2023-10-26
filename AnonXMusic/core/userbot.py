@@ -47,7 +47,7 @@ class Userbot(Client):
         )
 
     async def start(self):
-        LOGGER(__name__).info(f"Starting Assistants...")
+        LOGGER(__name__).info("Starting Assistants...")
         if config.STRING1:
             await self.one.start()
             assistants.append(1)
@@ -129,7 +129,7 @@ class Userbot(Client):
             LOGGER(__name__).info(f"Assistant Five Started as {self.five.name}")
 
     async def stop(self):
-        LOGGER(__name__).info(f"Stopping Assistants...")
+        LOGGER(__name__).info("Stopping Assistants...")
         try:
             if config.STRING1:
                 await self.one.stop()
