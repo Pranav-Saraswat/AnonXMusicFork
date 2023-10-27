@@ -8,7 +8,7 @@ from pyrogram.errors import (
     UserNotParticipant,
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
+from AnonXMusic.misc import db
 from AnonXMusic import YouTube, app
 from AnonXMusic.misc import SUDOERS
 from AnonXMusic.utils.database import (
@@ -20,8 +20,9 @@ from AnonXMusic.utils.database import (
     is_active_chat,
     is_maintenance,
 )
+from AnonXMusic.utils.database import is_active_chat
 from AnonXMusic.utils.inline import botplaylist_markup
-from config import PLAYLIST_IMG_URL, SUPPORT_CHAT, adminlist
+from config import PLAYLIST_IMG_URL, SUPPORT_CHAT, adminlist, QUEUE_LIMIT
 from strings import get_string
 
 links = {}
@@ -50,7 +51,13 @@ def PlayWrapper(command):
                     text=f"{app.mention} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ <a href={SUPPORT_CHAT}>sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ</a> ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
                     disable_web_page_preview=True,
                 )
-
+        if await is_active_chat(message.chat.id):
+            check = db.get(message.chat.id) 
+            if len(check) == QUEUE_LIMIT:
+                return await message.reply_text(
+                    text=f"ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ 10 ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.",
+                        disable_web_page_preview=True,
+                )                
         try:
             await message.delete()
         except:
