@@ -53,7 +53,7 @@ def PlayWrapper(command):
                 )
         if await is_active_chat(message.chat.id):
             check = db.get(message.chat.id) 
-            if len(check) == QUEUE_LIMIT:
+            if len(check) > QUEUE_LIMIT:
                 return await message.reply_text(
                     text=f"ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ 10 ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.",
                         disable_web_page_preview=True,
