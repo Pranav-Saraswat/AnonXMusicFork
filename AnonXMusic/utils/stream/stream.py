@@ -54,6 +54,9 @@ async def stream(
             if duration_sec > config.DURATION_LIMIT:
                 continue
             if await is_active_chat(chat_id):
+                check = db.get(chat_id) 
+                if len(check) > config.QUEUE_LIMIT:
+                    return await app.send_message(chat_id, "ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ 10 ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
                 await put_queue(
                     chat_id,
                     original_chat_id,
@@ -144,6 +147,9 @@ async def stream(
         except:
             raise AssistantErr(_["play_14"])
         if await is_active_chat(chat_id):
+            check = db.get(chat_id) 
+            if len(check) > config.QUEUE_LIMIT:
+                return await app.send_message(chat_id, "ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ 10 ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -204,6 +210,9 @@ async def stream(
         title = result["title"]
         duration_min = result["duration_min"]
         if await is_active_chat(chat_id):
+            check = db.get(chat_id) 
+            if len(check) > config.QUEUE_LIMIT:
+                return await app.send_message(chat_id, "ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ 10 ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -256,6 +265,9 @@ async def stream(
         duration_min = result["dur"]
         status = True if video else None
         if await is_active_chat(chat_id):
+            check = db.get(chat_id) 
+            if len(check) > config.QUEUE_LIMIT:
+                return await app.send_message(chat_id, "ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ 10 ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -309,6 +321,9 @@ async def stream(
         duration_min = "Live Track"
         status = True if video else None
         if await is_active_chat(chat_id):
+            check = db.get(chat_id) 
+            if len(check) > config.QUEUE_LIMIT:
+                return await app.send_message(chat_id, "ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ 10 ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -372,6 +387,9 @@ async def stream(
         title = "ɪɴᴅᴇx ᴏʀ ᴍ3ᴜ8 ʟɪɴᴋ"
         duration_min = "00:00"
         if await is_active_chat(chat_id):
+            check = db.get(chat_id) 
+            if len(check) > config.QUEUE_LIMIT:
+                return await app.send_message(chat_id, "ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ 10 ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
             await put_queue_index(
                 chat_id,
                 original_chat_id,
