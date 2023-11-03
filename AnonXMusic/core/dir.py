@@ -4,7 +4,7 @@ import logging
 from os import listdir, mkdir
 
 def dirr():
-    assets_folder = "assets"
+    assets_folder = "AnonXMusic/assets"
     downloads_folder = "downloads"
     cache_folder = "cache"
 
