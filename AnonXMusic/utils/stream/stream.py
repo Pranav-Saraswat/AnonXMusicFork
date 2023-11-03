@@ -56,7 +56,7 @@ async def stream(
             if await is_active_chat(chat_id):
                 check = db.get(chat_id) 
                 if len(check) > config.QUEUE_LIMIT:
-                    return await app.send_message(chat_id, "ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ 10 ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
+                    return await app.send_message(chat_id, f"ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ {config.QUEUE_LIMIT} ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
                 await put_queue(
                     chat_id,
                     original_chat_id,
@@ -149,7 +149,7 @@ async def stream(
         if await is_active_chat(chat_id):
             check = db.get(chat_id) 
             if len(check) > config.QUEUE_LIMIT:
-                return await app.send_message(chat_id, "ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ 10 ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
+                return await app.send_message(chat_id, f"ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ {config.QUEUE_LIMIT} ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -212,7 +212,7 @@ async def stream(
         if await is_active_chat(chat_id):
             check = db.get(chat_id) 
             if len(check) > config.QUEUE_LIMIT:
-                return await app.send_message(chat_id, "ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ 10 ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
+                return await app.send_message(chat_id, f"ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ {config.QUEUE_LIMIT} ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -267,7 +267,7 @@ async def stream(
         if await is_active_chat(chat_id):
             check = db.get(chat_id) 
             if len(check) > config.QUEUE_LIMIT:
-                return await app.send_message(chat_id, "ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ 10 ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
+                return await app.send_message(chat_id, f"ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ {config.QUEUE_LIMIT} ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -323,7 +323,7 @@ async def stream(
         if await is_active_chat(chat_id):
             check = db.get(chat_id) 
             if len(check) > config.QUEUE_LIMIT:
-                return await app.send_message(chat_id, "ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ 10 ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
+                return await app.send_message(chat_id, f"ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ {config.QUEUE_LIMIT} ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -389,7 +389,7 @@ async def stream(
         if await is_active_chat(chat_id):
             check = db.get(chat_id) 
             if len(check) > config.QUEUE_LIMIT:
-                return await app.send_message(chat_id, "ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ 10 ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
+                return await app.send_message(chat_id, f"ʟᴏᴏᴋꜱ ʟɪᴋᴇ ʏᴏᴜ ᴀʀᴇ ꜱᴘᴀᴍᴍɪɴɢ ᴀʟʀᴇᴀᴅʏ {config.QUEUE_LIMIT} ꜱᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴛᴏ ꜰɪɴɪꜱʜ ᴛʜᴇᴍ ꜰɪʀꜱᴛ ᴇʟꜱᴇ ᴜꜱᴇ /end.")
             await put_queue_index(
                 chat_id,
                 original_chat_id,
