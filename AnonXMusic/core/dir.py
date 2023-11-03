@@ -10,7 +10,6 @@ def dirr():
 
     if assets_folder not in listdir():
         logging.warning(f"{assets_folder} Folder not Found. Please clone repository again.")
-        sys.exit()
 
     for file in os.listdir():
         if file.endswith(".jpg") or file.endswith(".jpeg") or file.endswith(".png"):
