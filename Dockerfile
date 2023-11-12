@@ -12,4 +12,4 @@ COPY . .
 RUN pip3 install --no-cache-dir -U -r requirements.txt
 RUN apt update && apt autoremove -y
 RUN apt clean && rm -rf /var/lib/apt/lists/* ~/.thumbs/* ~/.cache
-CMD python3 -m YukkiMusic
+CMD python3 -m AnonXMusic
