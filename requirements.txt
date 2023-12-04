@@ -1,7 +1,7 @@
 aiofiles
 aiohttp
 beautifulsoup4
-dnspython~
+dnspython
 ffmpeg-python
 gitpython
 hachoir
@@ -12,7 +12,7 @@ psutil
 py-tgcalls
 ntgcalls
 pykeyboard
-git+git+https://github.com/KurimuzonAkuma/pyrogram@dev
+git+https://github.com/KurimuzonAkuma/pyrogram@dev
 python-dotenv
 pyyaml
 requests
