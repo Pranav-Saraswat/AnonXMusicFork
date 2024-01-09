@@ -12,7 +12,7 @@ psutil
 py-tgcalls
 ntgcalls
 pykeyboard
-git+https://github.com/KurimuzonAkuma/pyrogram@dev
+pyrofork
 python-dotenv
 pyyaml
 requests
@@ -20,6 +20,7 @@ speedtest-cli
 spotipy
 Tgcrypto
 unidecode
-git+https://github.com/yt-dlp/yt-dlp@master
+uvloop
 youtube-search
 youtube-search-python
+yt-dlp
