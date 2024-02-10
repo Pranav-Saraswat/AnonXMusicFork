@@ -14,10 +14,8 @@ from pytgcalls.exceptions import (
 from pytgcalls.types import Update
 from pytgcalls.types import MediaStream
 from pytgcalls.types import (
-    AudioParameters, 
     AudioQuality, 
-    VideoParameters, 
-    VideoQuality,
+    VideoQuality
 )
 from pytgcalls.types.stream import StreamAudioEnded
 
