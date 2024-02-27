@@ -194,13 +194,13 @@ class Call(PyTgCalls):
                 out,
                 audio_parameters=AudioQuality.HIGH,
                 video_parameters=VideoQuality.SD_480p,
-                additional_ffmpeg_parameters=f"-ss {played} -to {duration}",
+                ffmpeg_parameters=f"-ss {played} -to {duration}",
             )
             if playing[0]["streamtype"] == "video"
             else MediaStream(
                 out,
                 audio_parameters=AudioQuality.HIGH,
-                additional_ffmpeg_parameters=f"-ss {played} -to {duration}",
+                ffmpeg_parameters=f"-ss {played} -to {duration}",
             )
         )
         if str(db[chat_id][0]["file"]) == str(file_path):
@@ -263,13 +263,13 @@ class Call(PyTgCalls):
                 file_path,
                 audio_parameters=AudioQuality.HIGH,
                 video_parameters=VideoQuality.SD_480p,
-                additional_ffmpeg_parameters=f"-ss {to_seek} -to {duration}",
+                ffmpeg_parameters=f"-ss {to_seek} -to {duration}",
             )
             if mode == "video"
             else MediaStream(
                 file_path,
                 audio_parameters=AudioQuality.HIGH,
-                additional_ffmpeg_parameters=f"-ss {to_seek} -to {duration}",
+                ffmpeg_parameters=f"-ss {to_seek} -to {duration}",
             )
         )
         await assistant.change_stream(chat_id, stream)
